@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="card">
+    <view class="title">电子扬琴</view>
+    <view class="subtitle">点击音阶按钮模拟弹奏。请将最标准音色文件放入 assets/audio 目录。</view>
+  </view>
+
+  <view class="grid">
+    <block wx:for="{{notes}}" wx:key="name">
+      <button class="note-btn" bindtap="playNote" data-note="{{item.name}}">
+        <text class="note">{{item.label}}</text>
+        <text class="pitch">{{item.name}}</text>
+      </button>
+    </block>
+  </view>
+
+  <view class="card hint">
+    <view>当前音：{{currentNote || '未播放'}}</view>
+    <view class="subtitle">如文件缺失，会有弹窗提醒。</view>
+  </view>
+</view>

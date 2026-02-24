@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="card">
+    <view class="title">琴谱增删改查</view>
+    <view class="subtitle">可保存曲谱名称、调式和正文内容，保存在本地缓存。</view>
+  </view>
+
+  <view class="card form">
+    <input class="input" placeholder="曲谱名称" value="{{form.title}}" data-field="title" bindinput="onFieldInput" />
+    <input class="input" placeholder="调式（如 D 调）" value="{{form.key}}" data-field="key" bindinput="onFieldInput" />
+    <textarea class="textarea" placeholder="输入琴谱内容（简谱/备注）" value="{{form.content}}" data-field="content" bindinput="onFieldInput" />
+
+    <view class="actions">
+      <button class="primary" bindtap="saveScore">{{isEditing ? '更新琴谱' : '新增琴谱'}}</button>
+      <button wx:if="{{isEditing}}" bindtap="cancelEdit">取消编辑</button>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{!scores.length}}">
+    <view class="subtitle">暂无琴谱，先新增一条吧。</view>
+  </view>
+
+  <block wx:for="{{scores}}" wx:key="id">
+    <view class="card score-item">
+      <view class="score-head">
+        <view>
+          <view class="score-title">{{item.title}}</view>
+          <view class="subtitle">{{item.key || '未设置调式'}} · {{item.updatedAt}}</view>
+        </view>
+      </view>
+      <view class="score-content">{{item.content}}</view>
+      <view class="actions">
+        <button size="mini" bindtap="editScore" data-id="{{item.id}}">编辑</button>
+        <button size="mini" type="warn" bindtap="deleteScore" data-id="{{item.id}}">删除</button>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,39 @@
+.form .input,
+.form .textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fdfaf5;
+  border: 2rpx solid #ecd9c5;
+  border-radius: 12rpx;
+  padding: 16rpx;
+  margin-bottom: 14rpx;
+}
+
+.form .textarea {
+  min-height: 220rpx;
+}
+
+.actions {
+  display: flex;
+  gap: 12rpx;
+}
+
+.primary {
+  background: #a86f40;
+  color: #fff;
+}
+
+.score-item {
+  white-space: pre-wrap;
+}
+
+.score-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 4rpx;
+}
+
+.score-content {
+  margin: 14rpx 0;
+  line-height: 1.6;
+}
