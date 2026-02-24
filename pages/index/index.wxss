@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16rpx;
+}
+
+.note-btn {
+  background: linear-gradient(135deg, #f8dcbf, #e8b98d);
+  color: #4a2d17;
+  border-radius: 14rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.note {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.pitch {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+}
+
+.hint {
+  margin-top: 20rpx;
+}

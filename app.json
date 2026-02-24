@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/score/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "电子扬琴",
+    "navigationBarBackgroundColor": "#f9f6f0",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#a05d2f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "演奏"
+      },
+      {
+        "pagePath": "pages/score/index",
+        "text": "琴谱"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
